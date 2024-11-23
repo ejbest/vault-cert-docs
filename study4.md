@@ -1,6 +1,32 @@
 
+46 Using the CLI how can you see what policies are attached to the current token
 
+##### vault token lookup
+![IntegratedStorage](img/policies-current-token.png)
 
+47 Authentication Methods as Vault 1.8
+  - AppRole
+  - AliCloud
+  - AWS
+  - Azure
+  - Cloud Foundry
+  - GitHub
+  - Google Cloud
+  - JWT/OIDC
+  - Kerberos
+  - Kubernetes
+  - LDAP
+  - Oracle Cloud Infrastructure
+  - Okta
+  - RADIUS
+  - TLS Certificates
+  - Tokens
+  - Username and Password
+
+48 Batch Tokens in Vault - 2 key facts  
+1. batch tokens are not persisted (written) to storage
+2. batch tokens are not valid accross all clusters using Vault Enterprise Replications 
+https://developer.hashicorp.com/vault/docs/concepts/tokens#batch-tokens
 
 49 Vault supports a wide variety of storage backends. You need high availability and can you choose any of the available storage backends?  Not all backends are equal; consul & raft/integrated are the best:
 ##### Storage Backeneds"
@@ -31,20 +57,20 @@ https://developer.hashicorp.com/vault/docs/configuration/storage/raft
 https://developer.hashicorp.com/vault/tutorials/raft
 ![IntegratedStorage](img/integratedStorage.png)
 
-It is TRUE a rekey operation using the vault operator rekey command creates new unseal/recovery keys as well as a new master key.
+54 It is TRUE a rekey operation using the vault operator rekey command creates new unseal/recovery keys as well as a new master key.
 
 The operator rekey command generates a new set of unseal keys. This can optionally change the total number of key shares or the required threshold of those key shares to reconstruct the master key. This operation is zero downtime, but it requires that Vault is unsealed and a quorum of existing unseal keys are provided.
 
 https://developer.hashicorp.com/vault/tutorials/operations/rekeying-and-rotating
 
 
-Vault can use a root token. Select the valid methods from below
+55 Vault can use a root token. Select the valid methods from below
 1. running the command vault token create when using a valid root token
 2. generating a root token using a quorum of recovery keys when using Vault auto unseal
 3. initializing Vault when first creating the cluster by using vault operator init
 https://developer.hashicorp.com/vault/docs/concepts/tokens#root-tokens
 
-Human based auth methods are better suited for human-based access?
+56 Human based auth methods are better suited for human-based access?
 1. OIDC
 2. GitHub 
 3. Userpass
@@ -52,7 +78,7 @@ Human based auth methods are better suited for human-based access?
 5. Okta
 https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-authentication#github-authentication
 
-Which of the following are considered benefits of using policies in Vault? (select three)
+57 Which of the following are considered benefits of using policies in Vault? (select three)
 1. policies have an implicit deny, meaning that policies are deny by default
 2. policies provide Vault operators with role-based access control
 3. provides granular access control to paths within Vault
