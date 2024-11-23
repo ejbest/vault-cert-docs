@@ -53,6 +53,7 @@ Select More Options and enter the Mount path that LDAP was enabled on (corp-auth
 2. eliminates the requirement to deploy and manage a separate platform for storing encrypted data
 3. immediate access to storage since the data is stored locally on disk
 4. reduces operational overhead since all configuration is within Vault itself
+
 https://developer.hashicorp.com/vault/docs/configuration/storage/raft
 https://developer.hashicorp.com/vault/tutorials/raft
 ![IntegratedStorage](img/integratedStorage.png)
