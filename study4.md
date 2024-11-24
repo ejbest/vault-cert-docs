@@ -37,7 +37,7 @@ https://developer.hashicorp.com/vault/docs/secrets/transit#working-set-managemen
 
 $ env | grep VAULT <br>
 VAULT_ADDR=https://vault.mydomain.com
-VAULT_TOKEN=hvs.12345678abcdefghijklmnov
+VAULT_TOKEN=12345678abcdefghijklmnov
 
 https://developer.hashicorp.com/vault/docs/commands#environment-variables
 
